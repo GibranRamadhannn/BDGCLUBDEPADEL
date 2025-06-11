@@ -15,7 +15,7 @@ export default function NavbarTop() {
       {/* ========== Navbar Logo :begin ========== */}
       <div className="relative w-23 md:w-30 h-auto aspect-[3/2]">
         <Image
-          src="/logo-3.png"
+          src="/logo-1.png"
           alt="BDGCLUBDEPADEL Logo"
           className="object-contain"
           fill

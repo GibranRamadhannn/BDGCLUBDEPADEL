@@ -23,7 +23,7 @@ export default function Home() {
           <Image
             src="/logo-3.png"
             alt="BDGCLUBDEPADEL Logo"
-            width={200}
+            width={400}
             height={0}
           />
         </motion.div>
