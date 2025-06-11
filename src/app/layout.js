@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "BDGCLUBDEPADEL",
+  title: "BDG CLUB DE PADEL",
   description: "Bandung Club De Padel",
 };
 

@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import { AuroraBackground } from "../components/ui/aurora-background";
 import Image from "next/image";
-import { AuroraBackground } from "./components/ui/aurora-background";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section className="relative isolate min-h-screen font-[family-name:var(--font-montserrat)]">
       <AuroraBackground>

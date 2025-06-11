@@ -18,7 +18,10 @@ export default function NavDrawer({ isOpen, onClose }) {
       >
         {/* Button Close :begin => onClick = {onClose} */}
         <div className="relative z-10 flex justify-end p-4">
-          <button onClick={onClose} className="rounded-full bg-stoplight/80 p-2">
+          <button
+            onClick={onClose}
+            className="rounded-full bg-stoplight/80 p-2"
+          >
             <X className="w-6 h-6 text-white transition duration-700 ease-in-out" />
           </button>
         </div>
@@ -26,10 +29,18 @@ export default function NavDrawer({ isOpen, onClose }) {
 
         {/* Drawer Menu :begin */}
         <div className="relative z-10 mt-10 space-y-6 text-3xl font-semibold text-center">
-          <NavLinkDrawer href="/" className="border-b">Home</NavLinkDrawer>
-          <NavLinkDrawer href="/about" className="border-b">Tournament</NavLinkDrawer>
-          <NavLinkDrawer href="/projects" className="border-b">Event</NavLinkDrawer>
-          <NavLinkDrawer href="/contact" className="border-b">Contact</NavLinkDrawer>
+          <NavLinkDrawer href="/" className="border-b">
+            Home
+          </NavLinkDrawer>
+          <NavLinkDrawer href="/tournament" className="border-b">
+            Tournament
+          </NavLinkDrawer>
+          <NavLinkDrawer href="/event" className="border-b">
+            Event
+          </NavLinkDrawer>
+          <NavLinkDrawer href="/contact" className="border-b">
+            Contact
+          </NavLinkDrawer>
         </div>
         {/* Drawer Menu :end */}
 

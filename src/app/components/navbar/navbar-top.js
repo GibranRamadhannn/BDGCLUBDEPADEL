@@ -5,7 +5,7 @@ import NavLink from "../navbar/nav-link";
 import NavDate from "../navbar/nav-date";
 import { Menu, X } from "lucide-react";
 import NavDrawer from "../navbar/nav-drawer";
-import NavLogo from "../navbar/nav-logo";
+import Image from "next/image";
 
 export default function NavbarTop() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,16 +13,22 @@ export default function NavbarTop() {
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent p-3 flex items-center justify-between font-[family-name:var(--font-montserrat)] backdrop-blur-sm border-b">
       {/* ========== Navbar Logo :begin ========== */}
-      <div className="flex-shrink-0">
-        <NavLogo href="/" source="/logo-2.png" alt="BDGCLUBDEPADEL Logo" className="w-15 h-15 md:w-25 md:h-25" />
+      <div className="relative w-23 md:w-30 h-auto aspect-[3/2]">
+        <Image
+          src="/logo-2.png"
+          alt="BDGCLUBDEPADEL Logo"
+          className="dark:invert object-contain"
+          fill
+          priority
+        />
       </div>
       {/* ========== Navbar Logo :end ========== */}
 
       {/* ========== Navbar Links :begin ========== */}
       <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-4 font-semibold bg-white rounded-4xl p-1">
         <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">Tournament</NavLink>
-        <NavLink href="/projects">Event</NavLink>
+        <NavLink href="/tournament">Tournament</NavLink>
+        <NavLink href="/event">Event</NavLink>
         <NavLink href="/contact">Contact</NavLink>
       </div>
       {/* ========== Navbar Links :end ========== */}
