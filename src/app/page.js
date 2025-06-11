@@ -21,7 +21,7 @@ export default function Home() {
             Still warming up... big game comin’ soon
           </div>
           <Image
-            src="/logo-1.png"
+            src="/logo-3.png"
             alt="BDGCLUBDEPADEL Logo"
             width={200}
             height={0}
