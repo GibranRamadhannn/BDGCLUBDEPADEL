@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${bebasNeue.variable} ${roboto.variable} antialiased`}
       >
         <NavbarTop />
-        <div>{children}</div>
+        {children}
         <FooterSection id="footer-section" />
       </body>
     </html>
