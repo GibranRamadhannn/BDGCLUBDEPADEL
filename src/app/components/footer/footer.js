@@ -22,18 +22,6 @@ export default function FooterSection({ id }) {
               priority
             />
           </div>
-
-          <div className="flex flex-col justify-between items-start md:px-3 md:py-6 gap-5">
-            <h1 className="text-black text-xl md:text-3xl font-semibold uppercase font-[family-name:var(--font-geist-mono)]">
-              Join our mailing list
-            </h1>
-            <div className="flex w-full max-w-md items-center gap-2">
-              <Input type="email" placeholder="Email" className="dark:invert" />
-              <Button type="submit" variant="outline">
-                Subscribe
-              </Button>
-            </div>
-          </div>
         </div>
 
         <div className="md:p-4 mb-6 w-full grid grid-cols-2 gap-x-8 gap-y-2">

@@ -182,3 +182,12 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: transparent;
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

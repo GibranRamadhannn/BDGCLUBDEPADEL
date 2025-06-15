@@ -19,8 +19,8 @@ export default function NavDate() {
   }).format(today);
 
   return (
-    <h1 className="flex items-center rounded-full px-3 py-2 border border-background dark:border-foreground text-sm/6 font-[family-name:var(--font-geist-mono)] text-background dark:text-foreground">
-      <span className="rounded-full border border-background dark:border-foreground items-center justify-center align-items-center text-center mr-2">
+    <h1 className="flex items-center rounded-full px-3 py-2 bg-foreground text-sm/6 font-[family-name:var(--font-geist-mono)] text-background">
+      <span className="rounded-full border border-cavernous/80 items-center justify-center align-items-center text-center mr-2">
         {icon}
       </span>
       {formattedDate}
