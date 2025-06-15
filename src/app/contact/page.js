@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Title ::end */}
 
       {/* Content ::begin */}
-      <div className="md:py-6 md:flex md:flex-row md:justify-between md:items-center">
+      <div className="md:mb-22 md:flex md:flex-row md:justify-between md:items-center">
         {/* Contact Info ::begin */}
         <ContactContent />
         {/* Contact Info ::end */}
