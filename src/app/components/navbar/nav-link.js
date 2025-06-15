@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavLink({ href, children }) {
@@ -16,8 +17,8 @@ export default function NavLink({ href, children }) {
   }
 
   return (
-    <a href={href} className={NavClass()}>
+    <Link href={href} className={NavClass()}>
       {children}
-    </a>
+    </Link>
   );
 }

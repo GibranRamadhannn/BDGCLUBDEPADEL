@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import NavbarTop from "./components/navbar/navbar-top";
+import FooterSection from "./components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       >
         <NavbarTop />
         <div>{children}</div>
+        <FooterSection id="footer-section" />
       </body>
     </html>
   );

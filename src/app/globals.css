@@ -124,17 +124,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --black: #000;
+  --cavernous: #525252;
+  --silver-medal: #d6d6d6;
   --night-blue: #01064a;
   --stoplight: #d81012;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-cavernous: var(--cavernous);
+  --color-silver-medal: var(--silver-medal);
   --color-foreground: var(--foreground);
   --color-night-blue: var(--night-blue);
   --color-stoplight: var(--stoplight);
-  --color-black: var(--black);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -171,12 +173,12 @@ html {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: white;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--foreground);
+  background: var(--background);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--background);
+  background: transparent;
 }

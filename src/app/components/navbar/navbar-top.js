@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavLink from "../navbar/nav-link";
 import NavDate from "../navbar/nav-date";
 import { Menu, X } from "lucide-react";
@@ -9,15 +9,44 @@ import Image from "next/image";
 
 export default function NavbarTop() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNearFooter, setIsNearFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.getElementById("footer-section");
+      if (!footer) return;
+
+      const footerTop = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      setIsNearFooter(footerTop <= windowHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLogo = isNearFooter ? "/logo-2.png" : "/logo-1.png";
+  const navLogoClass = isNearFooter
+    ? "object-contain dark:invert"
+    : "object-contain";
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent p-3 flex items-center justify-between font-[family-name:var(--font-montserrat)] backdrop-blur-sm border-b">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 p-3 flex items-center justify-between font-[family-name:var(--font-montserrat)] backdrop-blur-sm transition-all ease-in-out duration-500 ${
+        isNearFooter
+          ? "bg-black"
+          : "bg-transparent text-black border-b border-white"
+      }`}
+    >
       {/* ========== Navbar Logo :begin ========== */}
-      <div className="relative w-23 md:w-30 h-auto aspect-[3/2]">
+      <div className="relative w-23 md:w-30 h-auto aspect-[3/2] transition-colors duration-500">
         <Image
-          src="/logo-1.png"
+          src={navLogo}
           alt="BDGCLUBDEPADEL Logo"
-          className="object-contain"
+          className={`${navLogoClass} transition-all duration-500 ease-in-out`}
           fill
           priority
         />
